@@ -1,0 +1,2 @@
+# homerc
+My ~/ configs
