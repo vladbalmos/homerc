@@ -101,3 +101,8 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+export GPG_DEFAULT_USER_ID="Vlad Balmos"
+export EDITOR=vim
+export PATH="/opt/toggldesktop:$PATH"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export TERM=xterm-256color
