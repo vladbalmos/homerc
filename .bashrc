@@ -108,3 +108,8 @@ if [ -f ~/.bash_local ]; then
 fi
 
 source ~/.tmuxinator.bash
+export GPG_DEFAULT_USER_ID="Vlad Balmos"
+export EDITOR=vim
+export PATH="/opt/toggldesktop:$PATH"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export TERM=xterm-256color
