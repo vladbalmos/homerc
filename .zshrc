@@ -74,19 +74,7 @@ alias left='tmuxinator start left'
 alias system-monitor='tmuxinator start system-monitor'
 alias remote-servers='tmuxinator start remote-servers'
 alias vim='/home/vladb/bin/nvim'
-
-# Variables
-export TERM=xterm-256color
-## workaround for handling TERM variable in multiple tmux sessions properly from http://sourceforge.net/p/tmux/mailman/message/32751663/ by Nicholas Marriott
-if [[ -n ${TMUX} && -n ${commands[tmux]} ]];then
-    case $(tmux showenv TERM 2>/dev/null) in
-        *256color) ;&
-    TERM=fbterm)
-        export TERM=screen-256color ;;
-    *)
-        export TERM=screen
-esac
-fi
+alias tmux='tmux -2'
 
 # Autorun stuff
 task project:today or +ACTIVE
