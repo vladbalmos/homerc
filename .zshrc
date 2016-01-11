@@ -39,6 +39,8 @@ function git_prompt_info()
 PROMPT='%F{yellow}%D{%a %b %C %H:%M:}%f %B%F{red}%n%f%b@%m:%B%F{green}%~%f%b%f $(git_prompt_info) (%?)
 %{→%}  '
 
+export TERM='xterm-256color'
+
 # Terminal title
 case $TERM in
     xterm*)
