@@ -39,7 +39,7 @@ function git_prompt_info()
 PROMPT='%F{yellow}%D{%a %b %C %H:%M:}%f %B%F{red}%n%f%b@%m:%B%F{green}%~%f%b%f $(git_prompt_info) (%?)
 %{→%}  '
 
-export TERM='xterm-256color'
+[ -z "$TMUX" ] && export TERM='xterm-256color'
 
 # Terminal title
 case $TERM in
@@ -71,11 +71,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 alias 'ls=ls --color' 'll=ls -lhaF'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
 alias 'xclip=xsel --clipboard'
-alias right='tmuxinator ssstart right'
+alias right='tmuxinator start right'
 alias left='tmuxinator start left'
 alias system-monitor='tmuxinator start system-monitor'
 alias remote-servers='tmuxinator start remote-servers'
-alias vim='/home/vlad/bin/nvim'
+alias vim='/home/vladb/bin/nvim'
 alias tmux='tmux -2'
 
 # Autorun stuff
