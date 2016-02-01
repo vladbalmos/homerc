@@ -73,7 +73,7 @@ alias right='tmuxinator start right'
 alias left='tmuxinator start left'
 alias system-monitor='tmuxinator start system-monitor'
 alias remote-servers='tmuxinator start remote-servers'
-alias vim='/home/vladb/bin/nvim'
+alias vim='/home/vlad/bin/nvim'
 alias tmux='tmux -2'
 
 # Autorun stuff
