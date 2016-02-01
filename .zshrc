@@ -6,7 +6,7 @@ setopt inc_append_history share_history autocd beep nomatch notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/vladb/.zshrc'
+zstyle :compinstall filename '/home/vlad/.zshrc'
 
 autoload -Uz compinit
 compinit
