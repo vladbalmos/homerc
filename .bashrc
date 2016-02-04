@@ -107,6 +107,7 @@ if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
 
+source ~/.tmuxinator.bash
 export GPG_DEFAULT_USER_ID="Vlad Balmos"
 export EDITOR=vim
 export PATH="/opt/toggldesktop:$PATH"
