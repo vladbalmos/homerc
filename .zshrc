@@ -8,9 +8,14 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/vladb/.zshrc'
 
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+
 
 # Prompt settings
 autoload -Uz promptinit
@@ -71,12 +76,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 alias 'ls=ls --color' 'll=ls -lhaF'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
 alias 'xclip=xsel --clipboard'
-alias right='tmuxinator start right'
-alias left='tmuxinator start left'
-alias system-monitor='tmuxinator start system-monitor'
-alias remote-servers='tmuxinator start remote-servers'
-alias vim='/home/vladb/bin/nvim'
 alias tmux='tmux -2'
+
+# custom aliases
+[[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
 # Autorun stuff
 task project:today or +ACTIVE
