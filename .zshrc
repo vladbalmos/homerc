@@ -72,8 +72,14 @@ case $TERM in
         ;;
 esac
 
+# More PATH
+if [[ -d $HOME/bin ]]; then
+    path+=("$HOME/bin")
+    export PATH
+fi
+
 # Aliases
-alias 'ls=ls --color' 'll=ls -lhaF'
+alias 'ls=ls --color' 'll=ls -lhaF' 'la=ls -aFh'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
 alias 'xclip=xsel --clipboard'
 alias tmux='tmux -2'
