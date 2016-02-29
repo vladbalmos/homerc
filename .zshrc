@@ -81,7 +81,7 @@ fi
 # Aliases
 alias 'ls=ls --color' 'll=ls -lhaF' 'la=ls -aFh'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
-alias 'xclip=xsel --clipboard'
+#alias 'xclip=xsel --clipboard'
 alias tmux='tmux -2'
 
 # custom aliases
