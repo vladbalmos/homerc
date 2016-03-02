@@ -87,5 +87,10 @@ alias tmux='tmux -2'
 # custom aliases
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
+# source rvm 
+[[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
+
 # Autorun stuff
 task project:today or +ACTIVE
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
