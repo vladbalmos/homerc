@@ -11,3 +11,7 @@ ln -s -f $CURRENT_PATH/.bashrc $HOME/.bashrc
 
 # zsh
 ln -s -f $CURRENT_PATH/.zshrc $HOME/.zshrc
+
+# tmux plugin manager
+[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
