@@ -11,3 +11,6 @@ ln -s -f $CURRENT_PATH/.bashrc $HOME/.bashrc
 
 # zsh
 ln -s -f $CURRENT_PATH/.zshrc $HOME/.zshrc
+
+# Git log alias
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
