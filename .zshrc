@@ -78,6 +78,9 @@ if [[ -d $HOME/bin ]]; then
     export PATH
 fi
 
+# gpg-utils required
+GPG_DEFAULT_USER_ID="Vlad Balmos"
+
 # Aliases
 alias 'ls=ls --color' 'll=ls -lhaF' 'la=ls -aFh'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
