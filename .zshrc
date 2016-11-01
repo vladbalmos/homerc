@@ -94,10 +94,14 @@ alias tmux='tmux -2'
 [[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 # Autorun stuff
-task project:today or +ACTIVE
+echo "\nTMUX SESSIONS"
+echo "-------------"
+tmux ls
+echo "\n"
 
 # Check for any projects which might have oudated dependencies
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
+echo "\n"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR='vim'
