@@ -95,6 +95,7 @@ alias tmux='tmux -2'
 
 # Autorun stuff
 task project:today or +ACTIVE
+php ~/Development/php-qoftd/qoftd.php
 
 # Check for any projects which might have oudated dependencies
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
