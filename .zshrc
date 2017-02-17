@@ -94,7 +94,10 @@ alias tmux='tmux -2'
 [[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 # Autorun stuff
-task project:today or +ACTIVE
+echo "\nTMUX SESSIONS"
+echo "-------------"
+tmux ls
+echo "\n"
 php ~/Development/php-qoftd/qoftd.php
 
 # Check for any projects which might have oudated dependencies
