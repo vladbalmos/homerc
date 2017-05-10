@@ -85,7 +85,6 @@ GPG_DEFAULT_USER_ID="Vlad Balmos"
 alias 'ls=ls --color' 'll=ls -lhaF' 'la=ls -aFh'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
 #alias 'xclip=xsel --clipboard'
-alias tmux='tmux -2'
 
 # custom aliases
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
@@ -94,11 +93,6 @@ alias tmux='tmux -2'
 [[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 # Autorun stuff
-echo "\nTMUX SESSIONS"
-echo "-------------"
-tmux ls
-echo "\n"
-php ~/Development/php-qoftd/qoftd.php
 
 # Check for any projects which might have oudated dependencies
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
@@ -106,3 +100,5 @@ php ~/Development/php-qoftd/qoftd.php
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR='vim'
 set -o emacs
+
+php ~/Development/php-qoftd/qoftd.php
