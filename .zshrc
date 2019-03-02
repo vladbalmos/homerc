@@ -78,6 +78,11 @@ if [[ -d $HOME/bin ]]; then
     export PATH
 fi
 
+if [[ -d $HOME/.local/bin ]]; then
+    path+=("$HOME/.local/bin")
+    export PATH
+fi
+
 # gpg-utils required
 GPG_DEFAULT_USER_ID="Vlad Balmos"
 
@@ -92,13 +97,13 @@ alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=a
 # source rvm 
 [[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
-# Autorun stuff
+NPM_PACKAGES="${HOME}/.npm-packages"
 
 # Check for any projects which might have oudated dependencies
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:$NPM_PACKAGES/bin" # More path
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 export EDITOR='vim'
 set -o emacs
-
-php ~/Development/php-qoftd/qoftd.php
