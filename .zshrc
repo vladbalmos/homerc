@@ -83,12 +83,19 @@ if [[ -d $HOME/.local/bin ]]; then
     export PATH
 fi
 
+if [[ -d $HOME/.gem/bin ]]; then
+    path+=("$HOME/.gem/bin")
+    export PATH
+fi
+
 # gpg-utils required
 GPG_DEFAULT_USER_ID="Vlad Balmos"
 
 # Aliases
 alias 'ls=ls --color' 'll=ls -lhaF' 'la=ls -aFh'
 alias 'grep=grep --color=auto' 'fgrep=fgrep --color=auto' 'egrep=egrep --color=auto'
+alias 'staccs-dev=tmuxinator start staccs -n staccs-dev'
+alias 'goodino-dev=tmuxinator start goodino -n goodino-dev'
 #alias 'xclip=xsel --clipboard'
 
 # custom aliases
@@ -107,3 +114,10 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 export EDITOR='vim'
 set -o emacs
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion"  ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GEM_HOME="$HOME/.gem"
+source ~/homerc/tmuxinator.zsh
