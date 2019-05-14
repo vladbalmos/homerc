@@ -103,6 +103,7 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
 
 export PATH="$PATH:$HOME/.rvm/bin:$NPM_PACKAGES/bin" # More path
+export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin" # More path
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 export EDITOR='vim'
