@@ -1,8 +1,13 @@
 sudo apt install \
     git build-essential vim vim-gtk3 meld gitk fzf docker.io silversearcher-ag exuberant-ctags \
-    python3-pip
+    python3-pip bat
 
 # optional
 php7
 nodejs
+npm
 mitzasql
+docker-compose
+
+# stuff to do
+cd ~/bin && ln -s /usr/bin/batcat bat
