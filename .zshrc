@@ -100,6 +100,8 @@ alias 'goodino-dev=tmuxinator start goodino -n goodino-dev'
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
 NPM_PACKAGES="${HOME}/.npm-packages"
+[[ ! -d "$NPM_PACKAGES" ]] && mkdir -p "$NPM_PACKAGES"
+npm config set prefix "$NPM_PACKAGES" || true
 
 export PATH="$PATH:$NPM_PACKAGES/bin" # More path
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
