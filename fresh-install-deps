@@ -1,0 +1,8 @@
+sudo apt install \
+    git build-essential vim vim-gtk3 meld gitk fzf docker.io silversearcher-ag exuberant-ctags \
+    python3-pip
+
+# optional
+php7
+nodejs
+mitzasql
