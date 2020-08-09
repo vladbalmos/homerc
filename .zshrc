@@ -6,7 +6,7 @@ setopt inc_append_history share_history autocd beep nomatch notify
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/vladb/.zshrc'
+zstyle :compinstall filename '/home/vlad/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -72,19 +72,17 @@ case $TERM in
         ;;
 esac
 
+export EDITOR='vim'
+set -o emacs
+
 # More PATH
-if [[ -d $HOME/bin ]]; then
+ [[ -d $HOME/bin ]]; then
     path+=("$HOME/bin")
     export PATH
 fi
 
 if [[ -d $HOME/.local/bin ]]; then
     path+=("$HOME/.local/bin")
-    export PATH
-fi
-
-if [[ -d $HOME/.gem/bin ]]; then
-    path+=("$HOME/.gem/bin")
     export PATH
 fi
 
@@ -101,24 +99,16 @@ alias 'goodino-dev=tmuxinator start goodino -n goodino-dev'
 # custom aliases
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
-# source rvm 
-[[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
-
 NPM_PACKAGES="${HOME}/.npm-packages"
 
+export PATH="$PATH:$NPM_PACKAGES/bin" # More path
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+[[ -f ~/homerc/tmuxinator.zsh ]] && . ~/homerc/tmuxinator.zsh
+#
 # Check for any projects which might have oudated dependencies
 [[ -s /tmp/projects-dependencies ]] && echo 'Some of your projects have outdated dependencies' && head /tmp/projects-dependencies
 
-export PATH="$PATH:$HOME/.rvm/bin:$NPM_PACKAGES/bin" # More path
-export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin" # More path
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-export EDITOR='vim'
-set -o emacs
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion"  ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export GEM_HOME="$HOME/.gem"
-source ~/homerc/tmuxinator.zsh
+# fzf
+[[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && . /usr/share/doc/fzf/examples/key-bindings.zsh
+[[ -f /usr/share/doc/fzf/examples/completion.zsh ]] && . /usr/share/doc/fzf/examples/completion.zsh
