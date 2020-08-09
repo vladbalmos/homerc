@@ -76,7 +76,7 @@ export EDITOR='vim'
 set -o emacs
 
 # More PATH
- [[ -d $HOME/bin ]]; then
+if [[ -d $HOME/bin ]]; then
     path+=("$HOME/bin")
     export PATH
 fi
