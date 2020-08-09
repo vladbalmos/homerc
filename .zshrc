@@ -112,3 +112,4 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # fzf
 [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && . /usr/share/doc/fzf/examples/key-bindings.zsh
 [[ -f /usr/share/doc/fzf/examples/completion.zsh ]] && . /usr/share/doc/fzf/examples/completion.zsh
+export FZF_DEFAULT_COMMAND='ag -g ""'
