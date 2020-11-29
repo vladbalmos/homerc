@@ -99,12 +99,17 @@ alias 'goodino-dev=tmuxinator start goodino -n goodino-dev'
 # custom aliases
 [[ -f ~/.zsh_aliases ]] && . ~/.zsh_aliases
 
+# Npm
 NPM_PACKAGES="${HOME}/.npm-packages"
 [[ ! -d "$NPM_PACKAGES" ]] && mkdir -p "$NPM_PACKAGES"
 npm config set prefix "$NPM_PACKAGES" || true
 
 export PATH="$PATH:$NPM_PACKAGES/bin" # More path
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Gem
+export GEM_HOME="$HOME/.gems"
+export PATH="$PATH:$GEM_HOME/bin" # More path
 
 [[ -f ~/homerc/tmuxinator.zsh ]] && . ~/homerc/tmuxinator.zsh
 #
@@ -114,6 +119,8 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # fzf
 [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && . /usr/share/doc/fzf/examples/key-bindings.zsh
 [[ -f /usr/share/doc/fzf/examples/completion.zsh ]] && . /usr/share/doc/fzf/examples/completion.zsh
+[[ -f ~/.fzf/shell/key-bindings.zsh ]] && . ~/.fzf/shell/key-bindings.zsh
+[[ -f ~/.fzf/shell/completion.zsh ]] && . ~/.fzf/shell/completion.zsh
 [[ -f ~/.fzf.zsh ]] && . ~/.fzf.zsh
 
 export FZF_DEFAULT_COMMAND='ag --hidden -g ""'
