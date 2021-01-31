@@ -16,3 +16,7 @@ cd ~/bin && ln -s /usr/bin/batcat bat
 # ruby
 mkdir ~/.gems
 gem install bundler
+
+# python
+pip3 install jedi
+pip3 install twine
