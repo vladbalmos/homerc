@@ -17,3 +17,6 @@ grep tmux ~/.bash_aliases > /dev/null 2>&1 || echo -e alias tmux=\'tmux -2\' >> 
 
 # Git log alias
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# MitzaSQL desktop shortcut
+[ -f ~/.local/share/applications/mitzasql.desktop ] || [ -h ~/.local/share/applications/mitzasql.desktop ] || ln -s $CURRENT_PATH/mitzasql.desktop ~/.local/share/applications/mitzasql.desktop
