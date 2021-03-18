@@ -8,6 +8,7 @@ nodejs
 npm
 yarn
 mitzasql
+mc
 docker-compose
 
 # stuff to do

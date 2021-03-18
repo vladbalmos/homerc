@@ -111,6 +111,9 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export GEM_HOME="$HOME/.gems"
 export PATH="$PATH:$GEM_HOME/bin" # More path
 
+# EB cli
+export PATH="$PATH:$HOME/.ebcli-virtual-env/executables"
+
 [[ -f ~/homerc/tmuxinator.zsh ]] && . ~/homerc/tmuxinator.zsh
 #
 # Check for any projects which might have oudated dependencies
