@@ -1,6 +1,6 @@
 sudo apt install \
-    git build-essential vim vim-gtk3 meld gitk fzf docker.io silversearcher-ag exuberant-ctags \
-    python3-pip bat ruby ruby-dev
+    git build-essential vim vim-gtk3 meld gitk docker.io silversearcher-ag exuberant-ctags \
+    python3-pip bat ruby ruby-dev tmux zsh
 
 # optional
 php7
@@ -10,6 +10,8 @@ yarn
 mitzasql
 mc
 docker-compose
+vlc
+fzf
 
 # stuff to do
 cd ~/bin && ln -s /usr/bin/batcat bat
@@ -21,3 +23,6 @@ gem install bundler
 # python
 pip3 install jedi
 pip3 install twine
+
+# vim
+nerd font patches
