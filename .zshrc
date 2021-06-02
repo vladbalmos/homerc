@@ -81,6 +81,11 @@ if [[ -d $HOME/bin ]]; then
     export PATH
 fi
 
+if [[ -d $HOME/bin/go ]]; then
+    path+=("$HOME/bin/go/bin")
+    export PATH
+fi
+
 if [[ -d $HOME/.local/bin ]]; then
     path+=("$HOME/.local/bin")
     export PATH
