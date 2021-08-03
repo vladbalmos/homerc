@@ -20,7 +20,7 @@ grep tmux ~/.bash_aliases > /dev/null 2>&1 || echo -e alias tmux=\'tmux -2\' >> 
 [ -f ~/.zshrc ] || [ -h ~/.zshrc ] || ln -s $CURRENT_PATH/.zshrc ~/.zshrc
 
 # tmux plugin manager
-[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+#[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Git log alias
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

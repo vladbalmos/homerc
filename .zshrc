@@ -114,6 +114,13 @@ export PATH="$PATH:$GEM_HOME/bin" # More path
 # EB cli
 export PATH="$PATH:$HOME/.ebcli-virtual-env/executables"
 
+# Go
+export PATH="$PATH:$HOME/bin/go/bin"
+export PATH="$PATH:$HOME/Development/go/bin"
+
+# Neovim
+export PATH="$PATH:$HOME/bin/neovim/bin"
+
 [[ -f ~/homerc/tmuxinator.zsh ]] && . ~/homerc/tmuxinator.zsh
 #
 # Check for any projects which might have oudated dependencies
