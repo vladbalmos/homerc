@@ -50,4 +50,4 @@ noremap _ ddkP
 vnoremap <C-c> "+y
 
 nnoremap <leader><leader>f <Cmd>call VSCodeNotify('revealInExplorer')<CR>
-nnoremap <leader><leader>c <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
+nnoremap <leader>c<leader> <Cmd>call VSCodeNotify('editor.action.commentLine')<CR>
