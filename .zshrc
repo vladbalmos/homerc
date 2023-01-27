@@ -91,6 +91,10 @@ if [[ -d $HOME/.local/bin ]]; then
     export PATH
 fi
 
+if [[ -d $HOME/Development/hw/pico/pico-sdk ]]; then
+    export PICO_SDK_PATH="$HOME/Development/hw/pico/pico-sdk"
+fi
+
 # gpg-utils required
 GPG_DEFAULT_USER_ID="Vlad Balmos"
 
