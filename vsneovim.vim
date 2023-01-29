@@ -29,6 +29,7 @@ set scrolloff=3 " Minimal number of screen liones to keep above and below the cu
 
 " Mappings
 nnoremap <leader><leader>n :nohlsearch<CR>
+nnoremap Y yy
 
 " Splits navigation
 nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
